@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="HatMakeableBase">
+		<defName>Nuker1110_Apparel_SurgicalMask</defName>
+		<recipeMaker Inherit="false" />
+		<label>Surgical Mask</label>
+		<description>A higher-density face mask, it allows your doctors to treat and operate with less worry about failures or causing infections.
+		
+Due to the complex manufacturing processes required, few materials are usable in its construction and much is wasted without Glitterworld-class manufacturing facilities.</description>
+		<techLevel>Industrial</techLevel>
+		<graphicData>
+		  <texPath>Things/Pawn/Humanlike/Apparel/ClothMask/ClothMask</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(0.7, 0.7)</drawSize>
+		</graphicData>
+		
+		<stuffCategories>
+		  <li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<statBases>
+		  <WorkToMake>3200</WorkToMake>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <Mass>0.04</Mass>
+		  <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		  <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
+		  <MedicalTendQuality>0.1</MedicalTendQuality>
+		  <MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>
+		  <FoodPoisonChance>-0.1</FoodPoisonChance>
+		</equippedStatOffsets>
+		<apparel>
+		  <developmentalStageFilter>Adult</developmentalStageFilter>
+		  <bodyPartGroups>
+			<li>Mouth</li>
+		  </bodyPartGroups>
+		  <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ClothMask/ClothMask</wornGraphicPath>
+		  <!--<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+		  <coversHeadMiddle>true</coversHeadMiddle>-->
+		  <drawData>
+			<dataNorth>
+				<layer>-3</layer>
+			</dataNorth>
+		  </drawData>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		</apparel>
+	</ThingDef>
+	<RecipeDef>
+	  
+	  <defName>Make_SurgicalMask</defName>
+	  
+	  <label>make surgical mask</label>
+	  
+	  <description>Make a surgical mask</description>
+	  
+	  <jobString>Making surgical mask.</jobString>
+	  
+	  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+	  
+	  <effectWorking>Tailor</effectWorking>
+	  
+	  <soundWorking>Recipe_Tailor</soundWorking>
+      
+	  <workAmount>3200</workAmount>
+	  <recipeUsers>
+		<li>ElectricTailoringBench</li>
+      </recipeUsers>
+	  
+	  <ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Hyperweave</li>
+				<li>Synthread</li>
+				<li>DevilstrandCloth</li>
+			  </thingDefs>
+			</filter>
+			<count>30</count>
+		  </li>
+	  </ingredients>
+	  <fixedIngredientFilter>
+	    <thingDefs>
+		  <li>Hyperweave</li>
+		  <li>Synthread</li>
+		  <li>DevilstrandCloth</li>
+		</thingDefs>
+	  </fixedIngredientFilter>
+	  <productHasIngredientStuff>true</productHasIngredientStuff>
+	  <products>
+		<Nuker1110_Apparel_SurgicalMask>1</Nuker1110_Apparel_SurgicalMask>
+	  </products>
+	  
+	  <researchPrerequisites>
+		<li>ComplexClothing</li>
+		<li>SterileMaterials</li>
+	  </researchPrerequisites>
+	  
+	  <workSkill>Crafting</workSkill>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+      </skillRequirements>
+	  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+	</RecipeDef>
+</Defs>

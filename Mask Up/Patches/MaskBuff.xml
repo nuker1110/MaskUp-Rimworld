@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName = "Apparel_ClothMask"]/equippedStatOffsets</xpath>
+    <value>
+      <MedicalTendQuality>0.05</MedicalTendQuality>
+	  <MedicalSurgerySuccessChance>0.05</MedicalSurgerySuccessChance>
+	  <FoodPoisonChance>-0.05</FoodPoisonChance>
+    </value>
+  </Operation>
+</Patch>
