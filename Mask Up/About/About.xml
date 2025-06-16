@@ -2,16 +2,27 @@
   <name>Mask Up!</name>                          <!-- The name of your mod in the mod list -->
   <author>Nuker1110</author>               <!-- Usually set to your Steam name -->
   <packageId>Nuker1110.MaskUp</packageId>     <!-- a unique identifier for your mod. Must contain only a-z and periods, no spaces. -->
-  <supportedVersions>                       <!-- the version(s) your mod supports in X.Y format. 1(X).3(Y) -->
+<supportedVersions>                       <!-- the version(s) your mod supports in X.Y format. 1(X).3(Y) -->
     <li>1.4</li>
     <li>1.5</li>
+    <li>1.6</li>
   </supportedVersions>
   <description>Grants Medical and Cooking buffs for wearing a face mask, and adds a more advanced Surgical Mask with greater bonuses.
+  
+  As of 1.6, no longer requires Biotech.
   </description>   <!-- enter information describing purpose of mod -->
-  <modDependencies>
-    <li>
+  <modDependenciesByVersion>
+  <v1.4>
+     <li>
         <packageId>Ludeon.RimWorld.Biotech</packageId>
 		<displayName>Biotech</displayName>
     </li>
-  </modDependencies>
+  </v1.4>
+  <v1.5>
+     <li>
+        <packageId>Ludeon.RimWorld.Biotech</packageId>
+		<displayName>Biotech</displayName>
+    </li>
+  </v1.5>
+  </modDependenciesByVersion>
 </ModMetaData>
